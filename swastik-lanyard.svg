@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 640" width="420" height="640" role="img" aria-label="Swastik ID badge">
+<title>Swastik — swinging ID badge</title>
+<defs>
+<style type="text/css"><![CDATA[
+text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+@keyframes settle{0%{transform:rotate(0deg) translateY(-640px)}18%{transform:rotate(0deg) translateY(0)}30%{transform:rotate(11deg)}46%{transform:rotate(-8deg)}62%{transform:rotate(5deg)}78%{transform:rotate(-3deg)}92%{transform:rotate(1.3deg)}100%{transform:rotate(0deg)}}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes shine{0%{transform:translateX(-340px) skewX(-18deg)}55%,100%{transform:translateX(420px) skewX(-18deg)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}
+.settle{transform-origin:210px 6px;animation:settle 3.2s cubic-bezier(.34,1.1,.5,1) forwards}
+.sway{transform-origin:210px 6px;animation:sway 4.2s ease-in-out 3.2s infinite}
+.shine{animation:shine 4.5s ease-in-out 3.4s infinite}
+.fade{opacity:0}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+]]></style>
+<linearGradient id="strapg" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#0891b2"/><stop offset="50%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#0891b2"/>
+</linearGradient>
+<linearGradient id="cardg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#101a2f"/><stop offset="100%" stop-color="#0a1120"/>
+</linearGradient>
+<linearGradient id="cardborder" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#7C3AED"><animate attributeName="stop-color" values="#7C3AED;#22D3EE;#10B981;#7C3AED" dur="6s" repeatCount="indefinite"/></stop>
+  <stop offset="100%" stop-color="#22D3EE"><animate attributeName="stop-color" values="#22D3EE;#10B981;#7C3AED;#22D3EE" dur="6s" repeatCount="indefinite"/></stop>
+</linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#c8ccd6"/><stop offset="45%" stop-color="#8a90a0"/><stop offset="55%" stop-color="#6a7080"/><stop offset="100%" stop-color="#9aa0b0"/>
+</linearGradient>
+<linearGradient id="shineg" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#fff" stop-opacity="0"/><stop offset="50%" stop-color="#fff" stop-opacity=".12"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="lglow"><stop offset="0%" stop-color="#22D3EE" stop-opacity=".14"/><stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<filter id="glow2"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity=".5"/></filter>
+<clipPath id="cardclip"><rect x="82" y="288" width="256" height="320" rx="20"/></clipPath>
+</defs>
+
+<circle cx="210" cy="430" r="220" fill="url(#lglow)"><animate attributeName="r" values="220;240;220" dur="5s" repeatCount="indefinite"/></circle>
+
+<g class="settle">
+  <!-- clip fastener -->
+  <rect x="196" y="0" width="28" height="16" rx="4" fill="url(#metal)"/>
+  <circle cx="210" cy="8" r="4" fill="#4a4f5c"/>
+  <!-- strap -->
+  <path d="M198 14 L166 300 L254 300 L222 14 Z" fill="url(#strapg)"/>
+  <line x1="210" y1="14" x2="210" y2="300" stroke="#0e7490" stroke-width="1" opacity=".5"/>
+  <text x="210" y="120" text-anchor="middle" font-size="11" fill="#e0f2fe" opacity=".85" transform="rotate(90 210 120)" letter-spacing="2">SWASTIK1804</text>
+  <text x="210" y="220" text-anchor="middle" font-size="11" fill="#e0f2fe" opacity=".85" transform="rotate(90 210 220)" letter-spacing="2">FULL STACK DEV</text>
+
+  <!-- badge card -->
+  <g class="sway">
+    <rect x="80" y="286" width="260" height="324" rx="22" fill="#000" opacity=".3" filter="url(#cardShadow)"/>
+    <rect x="82" y="288" width="256" height="320" rx="20" fill="url(#cardg)" stroke="url(#cardborder)" stroke-width="2"/>
+
+    <g clip-path="url(#cardclip)">
+      <rect x="82" y="288" width="256" height="72" fill="#0e1526"/>
+      <text x="210" y="316" text-anchor="middle" font-size="10.5" fill="#64748b" letter-spacing="3">DEVELOPER ID</text>
+      <text x="210" y="338" text-anchor="middle" font-size="12" fill="#22D3EE" font-weight="bold" letter-spacing="1">SWASTIK1804</text>
+
+      <!-- avatar: generic code glyph, no photo -->
+      <circle cx="210" cy="430" r="52" fill="#0a1120" stroke="url(#cardborder)" stroke-width="2"/>
+      <text x="210" y="444" text-anchor="middle" font-size="40" font-weight="bold" fill="#22D3EE" filter="url(#glow2)">&lt;/&gt;</text>
+
+      <text x="210" y="512" text-anchor="middle" font-size="19" font-weight="bold" fill="#f8fafc">Swastik</text>
+      <text x="210" y="534" text-anchor="middle" font-size="12" fill="#94a3b8">Full Stack Developer</text>
+      <text x="210" y="552" text-anchor="middle" font-size="12" fill="#94a3b8">CS Student</text>
+
+      <circle cx="188" cy="580" r="4" fill="#28c840" class="pulse"/>
+      <text x="200" y="584" font-size="10.5" fill="#8b949e">Open to collaborate</text>
+
+      <!-- shine sweep -->
+      <rect class="shine" x="0" y="288" width="90" height="320" fill="url(#shineg)"/>
+    </g>
+  </g>
+</g>
+
+<text x="210" y="632" text-anchor="middle" font-size="11" fill="#475569" class="fade" style="animation:fadeIn .6s ease 3.6s forwards">github.com/SWASTIK1804</text>
+</svg>
